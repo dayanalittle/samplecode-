@@ -1,0 +1,19 @@
+
+function placeChip(evt) {
+  let column = parseInt(evt.target.id.replace('cir', ''));
+  while (column > 7) {
+    column -= 7
+  }
+
+
+  let circles = 35
+
+  for (let i = circles; i >= 0; i -= 7) {
+    if (board[column + i] === null) {
+      board[column + i] = turn
+      break;
+    }
+  }
+
+
+}
