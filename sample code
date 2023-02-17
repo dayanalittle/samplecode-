@@ -1,4 +1,15 @@
 
+function handleClick(evt) {
+
+  if (winner === false && tie === false) {
+      placeChip(evt)
+  }
+  checkForTie()
+  checkForWinner()
+  switchPlayerTurn()
+  render()
+}
+
 function placeChip(evt) {
   let column = parseInt(evt.target.id.replace('cir', ''));
   while (column > 7) {
